@@ -19,6 +19,7 @@ jobs:
               run: echo "Lint successful"
     test:
         name: Test
+        needs: lint
         runs-on: ubuntu-latest
         steps:
             - name: code setup
@@ -36,6 +37,7 @@ jobs:
     deploy:
         name: Build
         runs-on: ubuntu-latest
+        needs: [lint, test]
         steps:
             - name: code setup
               uses: actions/checkout@v3
