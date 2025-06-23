@@ -1,0 +1,8 @@
+name: issue-callenge
+on: issues
+jobs:
+    output:
+        runs-on: ubuntu-latest
+        steps:
+            - name: output
+              run: echo "output - ${{github.event}}"
