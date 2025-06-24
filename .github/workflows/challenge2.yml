@@ -1,7 +1,8 @@
 name: issue-callenge
 on: 
     push:
-        paths-ignore: .github/workflow
+        paths-ignore: .github/workflow/*
+    workflow_dispatch: 
 jobs:
     output:
         runs-on: ubuntu-latest
