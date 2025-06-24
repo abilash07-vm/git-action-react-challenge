@@ -49,7 +49,11 @@ jobs:
               run: npm ci
             - name: run build
               run: npm run build
+            - name: upload artifact
+              uses: actions/upload-artifact@v3
+              with:
+                path: dist
             - name: Step completion
               run: echo "Deploy successful"
-                
+              
               
