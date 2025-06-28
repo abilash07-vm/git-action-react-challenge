@@ -36,7 +36,7 @@ jobs:
             - name: check downloads
               run: ls -R
             - name: js build file name
-              run: echo ${{ toJson(needs.build) }}
+              run: echo ${{ needs.build.outputs.js-build-filename }}
             - name: Step completion
               run: echo "Deploy successful"
 
