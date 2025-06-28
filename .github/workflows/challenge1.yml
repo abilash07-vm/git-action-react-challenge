@@ -34,9 +34,9 @@ jobs:
               with: 
                 path: dist
             - name: check downloads
-              run: ls dist/
+              run: ls -R
             - name: js build file name
-              run: echo ${{ needs.build }}
+              run: echo ${{ toJson(needs.build) }}
             - name: Step completion
               run: echo "Deploy successful"
 
