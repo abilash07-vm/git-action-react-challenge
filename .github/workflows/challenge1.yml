@@ -25,7 +25,7 @@ jobs:
               run: find dist/assets/*.js -type f
             - name: save js file name
               id: js-file
-              run: find dist/assets/*.js -type f -execdir echo 'js-file-name={}' >> $GITHUB_OUTPUT ';'
+              run: find dist/assets/*.js -type f -exec echo 'js-file-name={}' >> $GITHUB_OUTPUT ';'
     deploy:
         name: deploy
         needs: build
