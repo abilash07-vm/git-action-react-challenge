@@ -34,7 +34,7 @@ jobs:
               with: 
                 path: dist
             - name: check downloads
-              run: ll
+              run: ls dist/
             - name: js build file name
               run: echo ${{ needs.build }}
             - name: Step completion
