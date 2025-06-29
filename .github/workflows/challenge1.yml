@@ -25,6 +25,7 @@ jobs:
     build:
         name: Build
         runs-on: ubuntu-latest
+        needs: test
         outputs: 
           js-build-filename: ${{ steps.js-file.outputs.js-file-name }}
         steps:
