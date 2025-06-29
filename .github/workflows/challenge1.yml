@@ -1,6 +1,27 @@
 name: action-challenge
 on: push
 jobs:
+    test:
+      name: test
+      runs-on: ubuntu-latest
+      outputs: 
+        js-build-filename: ${{ steps.js-file.outputs.js-file-name }}
+      steps:
+          - name: code setup
+            uses: actions/checkout@v3
+          - name: install node
+            uses: actions/setup-node@v3
+            with:
+              node-version: 18
+          - name: cache dependency
+            uses: actions/cache@v4
+            with:
+              path: ~/.npm
+              key: ${{hashFiles('**/package-lock.json')}}
+          - name: install dependency
+            run: npm ci
+          - name: run build
+            run: npm run test
     build:
         name: Build
         runs-on: ubuntu-latest
@@ -13,6 +34,11 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: 18
+            - name: cache dependency
+              uses: actions/cache@v4
+              with:
+                path: ~/.npm
+                key: ${{hashFiles('**/package-lock.json')}}
             - name: install dependency
               run: npm ci
             - name: run build
