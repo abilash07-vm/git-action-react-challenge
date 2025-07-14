@@ -8,8 +8,10 @@ jobs:
         - name: checkout code
           uses: actions/checkout@v4
         - name: call custom calls
+          id: nodeCall
           uses: ./.github/actions/simple-node-action
           with:
-            num1 : 1
+            num1: 1
             num2: 2
-        
+        - name: print output
+          run: echo "${{steps.output.nodeCall.sumVal}}"
