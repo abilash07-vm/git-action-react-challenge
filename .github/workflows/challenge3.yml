@@ -14,4 +14,4 @@ jobs:
             num1: 1
             num2: 2
         - name: print output
-          run: echo "${{steps.output.nodeCall.sumVal}}"
+          run: echo "${{toJson(steps)}}"
