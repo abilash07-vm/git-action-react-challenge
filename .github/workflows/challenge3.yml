@@ -9,7 +9,7 @@ jobs:
           uses: actions/checkout@v4
         - name: call custom calls
           uses: ./.github/actions/simple-node-action
-        #   with:
-        #     num1 : 1
-        #     nums2: 2
+          with:
+            num1 : 1
+            nums2: 2
         
