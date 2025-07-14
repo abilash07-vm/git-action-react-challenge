@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: checkout code
-          uses: actions/checkout
+          uses: actions/checkout@v4
         # - name: call custom calls
         #   uses: ./.github/actions/simple-node-action
