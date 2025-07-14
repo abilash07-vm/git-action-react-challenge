@@ -1,0 +1,9 @@
+name: check custom actions
+on: push
+jobs:
+  callJavaScript:
+    name: call Java script
+    runs-on: ubuntu-latest
+    steps:
+        - name: call custom calls
+          uses: ./.github/actions/simple-node-action

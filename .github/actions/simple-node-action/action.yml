@@ -1,0 +1,5 @@
+name: Calculate sum of 2 numbers
+description: Calculate sum of 2 numbers using node js
+runs:
+  using: 'node16'
+  main: index.js
