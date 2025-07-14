@@ -3,13 +3,13 @@ description: Calculate sum of 2 numbers using node js
 runs:
   using: 'node16'
   main: index.js
-  inputs:
+  input:
     num1:
       required: true
       description: getting the first number
     num2:
       required: true
       description: getting the second number
-  outputs:
+  output:
     sumVal:
       description: result of sum of 2 numbers
