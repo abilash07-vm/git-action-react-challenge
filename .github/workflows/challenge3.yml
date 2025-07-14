@@ -5,5 +5,7 @@ jobs:
     name: call Java script
     runs-on: ubuntu-latest
     steps:
+        - name: checkout code
+          uses: actions/checkout
         - name: call custom calls
           uses: ./.github/actions/simple-node-action
