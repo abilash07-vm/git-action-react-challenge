@@ -1,15 +1,16 @@
 name: Calculate sum of 2 numbers
 description: Calculate sum of 2 numbers using node js
-runs:
-  using: 'node16'
-  main: index.js
-  inputs:
+inputs:
     num1:
       required: true
       description: getting the first number
     num2:
       required: true
       description: getting the second number
-  outputs:
-    sumVal:
-      description: result of sum of 2 numbers
+outputs:
+  sumVal:
+    description: result of sum of 2 numbers
+runs:
+  using: 'node16'
+  main: index.js
+  
