@@ -11,5 +11,5 @@ jobs:
           uses: ./.github/actions/simple-node-action
           with:
             num1 : 1
-            nums2: 2
+            num2: 2
         
